@@ -1,6 +1,7 @@
 package com.susiha.placeholderplugin.proxy;
 
 import android.app.Activity;
+import android.content.ComponentName;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -60,5 +61,14 @@ public class ProxyActivity extends Activity {
         Intent newIntent  = new Intent(this,ProxyActivity.class);
         newIntent.putExtra(Constants.TargetClassName,intent.getStringExtra(Constants.TargetClassName));
         super.startActivity(newIntent);
+    }
+
+
+    @Override
+    public ComponentName startService(Intent service) {
+        //调用ProxyService 同样传递的参数改成了即将要调用的Service
+        Intent newIntent  = new Intent(this,ProxyService.class);
+        newIntent.putExtra(Constants.TargetClassName,service.getComponent().getClassName());
+        return super.startService(newIntent);
     }
 }

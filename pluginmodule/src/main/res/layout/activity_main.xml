@@ -12,7 +12,7 @@
         android:layout_centerInParent="true"
         android:textSize="37dp"
         android:textColor="#333333"
-        android:text="this is a plugin FirstPage"
+        android:text="plugin MainActivity"
         android:id="@+id/desc"
         />
     <Button
@@ -21,12 +21,26 @@
         android:layout_centerInParent="true"
         android:layout_below="@id/desc"
         android:layout_marginTop="40dp"
-        android:id="@+id/next"
-        android:text="下一页"
-
-
-
+        android:id="@+id/next_Activity"
+        android:text="启动Activity"
         />
-
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/next_Activity"
+        android:layout_marginTop="40dp"
+        android:id="@+id/next_Service"
+        android:text="启动服务"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/next_Service"
+        android:layout_marginTop="40dp"
+        android:id="@+id/next_boardcast"
+        android:text="发送广播"
+        />
 
 </RelativeLayout>

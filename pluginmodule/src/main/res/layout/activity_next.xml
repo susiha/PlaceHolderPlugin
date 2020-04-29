@@ -12,6 +12,6 @@
         android:layout_centerInParent="true"
         android:textSize="37dp"
         android:textColor="#333333"
-        android:text="this is a plugin NextPage"
+        android:text="NextPage"
         />
 </RelativeLayout>

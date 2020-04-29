@@ -2,6 +2,8 @@ package com.susiha.pluginmodule;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,8 +15,8 @@ public class BaseActivity extends Activity implements ActivityInterface {
     public Activity hostAppActivity;
 
     @Override
-    public void jumpIntoPlugin(Activity activity) {
-        hostAppActivity = activity;
+    public void jumpIntoPlugin(Context activity) {
+        hostAppActivity = (Activity) activity;
     }
 
     @SuppressLint("MissingSuperCall")
@@ -75,4 +77,13 @@ public class BaseActivity extends Activity implements ActivityInterface {
         hostAppActivity.startActivity(intentNew);
     }
 
+
+    public ComponentName startService(Intent intent) {
+
+        Intent intentNew = new Intent();
+        //把子类封装在Intent中的Target.class(比如:NextActivity.class) 以参数的形式传递过去
+        intentNew.putExtra(Constants.TargetClassName,
+                intent.getComponent().getClassName());
+       return hostAppActivity.startService(intentNew);
+    }
 }
