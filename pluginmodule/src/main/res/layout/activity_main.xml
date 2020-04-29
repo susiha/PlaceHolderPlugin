@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7f7f7f"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textSize="37dp"
+        android:textColor="#333333"
+        android:text="this is a plugin FirstPage"
+        android:id="@+id/desc"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/desc"
+        android:layout_marginTop="40dp"
+        android:id="@+id/next"
+        android:text="下一页"
+
+
+
+        />
+
+
+</RelativeLayout>
