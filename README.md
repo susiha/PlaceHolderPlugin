@@ -13,3 +13,7 @@
  > 在android9.0之后用getPackageArchiveInfo通过SdCard路径是找不到对应的PackageInfo信息的，所以在代码中使用copy
  > 在使用权限上 需要添加 android:requestLegacyExternalStorage="true"这在华为手机会出现，其他手机没有测试
  > 插件中的其他Activity不需要在清单中注册，其实都是跳转到ProxyActivity,从ProxyActivity中执行相应的方法，因此ProxyActivity的启动模式只能是标准模式
+ 
+### Service
+  Service 与Activity一样
+  
