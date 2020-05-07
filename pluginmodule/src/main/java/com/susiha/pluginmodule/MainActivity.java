@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import com.susiha.standard.utils.Constants;
+
 public class MainActivity extends BaseActivity {
 
     @Override
@@ -25,6 +27,9 @@ public class MainActivity extends BaseActivity {
         findViewById(R.id.next_boardcast).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(Constants.BroadCastAction);
+                intent.putExtra(Constants.BroadCastParam,"Hello pluginBoardCast");
+                sendBroadcast(intent);
                Toast.makeText(hostAppActivity,"发送广播",Toast.LENGTH_LONG).show();
             }
         });

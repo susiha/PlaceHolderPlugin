@@ -78,6 +78,12 @@ public class PluginManager {
             return ;
         }
 
+
+
+        PluginPackageParse packageParse = new PluginPackageParse(file,context);
+        packageParse.registerPluginReceiver(pluginLoader);
+
+
         Log.i(Constants.DebugTag,"susiha >>> 使用插件时,插件文件大小"+file.length());
 
 

@@ -28,4 +28,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
     implementation project(path: ':standard')
     implementation 'com.hjq:xxpermissions:5.2'
+    implementation 'com.uniquext.androidx:widget-recycleview:1.0.0'
 }

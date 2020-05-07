@@ -86,4 +86,10 @@ public class BaseActivity extends Activity implements ActivityInterface {
                 intent.getComponent().getClassName());
        return hostAppActivity.startService(intentNew);
     }
+
+
+    @Override
+    public void sendBroadcast(Intent intent) {
+        hostAppActivity.sendBroadcast(intent);
+    }
 }

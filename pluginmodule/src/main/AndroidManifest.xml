@@ -16,6 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <receiver android:name=".MyBoradCast">
+            <intent-filter>
+                <action android:name="com.susiha.plugin.staticregister"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
