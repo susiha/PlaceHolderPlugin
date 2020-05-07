@@ -16,4 +16,8 @@
  
 ### Service
   Service 与Activity一样
+### 插件中静态注册广播
+  1. 首先拿到宿主中Manifest中的信息，比如说静态广播的全类名，Action过滤器等
+  2. 通过初始化的DexClassLoader把广播的全类名加载进来 然后转化为BroadCastReceiver
+  3. 在宿主中动态注册
   
